@@ -1,4 +1,17 @@
-import lifeeasy
+from subprocess import check_output # Using this import just to install the dependencies if not.
+
+# I will only use my library lifeeasy and will not import anything else after it is installed.
+
+# IMPORTS
+try:
+    import lifeeasy
+except:
+    print('It is the first time launching the program')
+    print('Installing the dependencies...')
+    command_output = check_output(["pip", "install", "lifeeasy"], universal_newlines=True)
+    import lifeeasy
+    print('Successfully installed the dependencies!')
+    lifeeasy.sleep(2)
 
 print('System Information')
 print("System: " + lifeeasy.system())
