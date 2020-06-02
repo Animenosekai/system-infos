@@ -45,11 +45,11 @@ ram_usage = "RAM Usage: " + str(lifeeasy.used_ram()) + '/' + str(lifeeasy.total_
 swap_usage = 'SWAP Usage: ' + str(lifeeasy.used_swap_memory()) + '/' + str(lifeeasy.total_swap_memory()) + ' (' + str(lifeeasy.used_swap_memory_percentage()) + '%)'
 disk_read = "Disk Total Read: " + lifeeasy.disk_total_read()
 disk_write = "Disk Total Write: " + lifeeasy.disk_total_write()
-net_receive = "Net. Total Received: " + lifeeasy.net_total_bytes_received()
-net_sent = "Net. Total Sent: " + lifeeasy.net_total_bytes_sent()
+net_receive = "Net. Total Received: " + lifeeasy.net_total_received()
+net_sent = "Net. Total Sent: " + lifeeasy.net_total_sent()
 
 lifeeasy.display_body([time, '', cpu_freq, cpu_usage, ram_usage, swap_usage, disk_read, disk_write, net_receive, net_sent])
-lifeeasy.display(wait=0.5, delay=0.5)
+lifeeasy.display(wait=0.1, delay=0.1)
 try:
     while True:
         time = lifeeasy.today() + ' ' + lifeeasy.current_time()
@@ -59,8 +59,8 @@ try:
         swap_usage = 'SWAP Usage: ' + str(lifeeasy.used_swap_memory()) + '/' + str(lifeeasy.total_swap_memory()) + ' (' + str(lifeeasy.used_swap_memory_percentage()) + '%)'
         disk_read = "Disk Total Read: " + lifeeasy.disk_total_read()
         disk_write = "Disk Total Write: " + lifeeasy.disk_total_write()
-        net_receive = "Net. Total Received: " + lifeeasy.net_total_bytes_received()
-        net_sent = "Net. Total Sent: " + lifeeasy.net_total_bytes_sent()
+        net_receive = "Net. Total Received: " + lifeeasy.net_total_received()
+        net_sent = "Net. Total Sent: " + lifeeasy.net_total_sent()
 
         lifeeasy.display_body([time, '', cpu_freq, cpu_usage, ram_usage, swap_usage, disk_read, disk_write, net_receive, net_sent])
 except:
